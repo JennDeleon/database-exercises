@@ -1,6 +1,7 @@
 USE jennifer;
 INSERT INTO albums (artist, name, release_date, sales, genre)
 VALUES ('Mars Volta', 'De-Louses', 2003, 30, 'Rock'),
+       ('Michael Jackson', 'Thriller', 1982, 49.2, 'Pop'),
        ('The Killers', 'Mr.Brightside', 2004, 28, 'Rock'),
        ('The Midnight', 'Sunset', 2016, 20, 'Synth wave'),
        ('Pink Floyd', 'The Dark Side of the Moon', 1973, 26, 'Progressive rock'),
