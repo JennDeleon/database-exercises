@@ -2,7 +2,7 @@ USE jennifer;
 
 SELECT album_name FROM albums WHERE artist = 'Pink Floyd';
 
-SELECT release_date FROM albums WHERE album_name = 'Sgt. Pepper''s Lonely Hearts Club Band';
+SELECT release_date FROM albums WHERE album_name = 'Sgt. Pepper`s Lonely Hearts Club Band';
 
 SELECT genre FROM albums WHERE album_name = 'Nevermind';
 
