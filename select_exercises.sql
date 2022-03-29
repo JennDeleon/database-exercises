@@ -10,3 +10,9 @@ SELECT album_name FROM albums WHERE release_date BETWEEN 1990 AND 1999;
 SELECT album_name FROM albums WHERE sales < 20;
 
 SELECT album_name FROM albums WHERE genres = 'Rock';
+
+SELECT * FROM albums WHERE
+gennre = 'disco';
+DELETE FROM albums WHERE genre = 'disco';
+
+SELECT* FROM albums WHERE artist = 'Whitney Houston';
