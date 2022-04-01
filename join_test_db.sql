@@ -17,6 +17,7 @@ FROM employees AS emp
 WHERE emp.gender = 'f' AND dm.to_date >= now()
 ORDER BY d.dept_name;
 
+# Find the current titles of employees currently working in the Customer Service department.
 SELECT t.title AS title, COUNT(e.emp_no) AS total
 FROM titles AS t
          JOIN employees AS e ON e.emp_no = t.emp_no
@@ -34,6 +35,8 @@ WHERE t.to_date > curdate()
   AND de.to_date > CURDATE()
 GROUP BY title;
 
+# Find the current salary of all current managers.
+
 SELECT d.dept_name AS Department, CONCAT(emp.first_name, ' ', emp.last_name) AS Department_Manager, s.salary AS Salary
 FROM employees AS emp
          JOIN dept_manager AS dm ON dm.emp_no = emp.emp_no
@@ -48,8 +51,12 @@ FROM employees AS e
          JOIN salaries s on e.emp_no = s.emp_no
 WHERE s.to_date >= now();
 
-SELECT CONCAT(e.first_name, ' ', e.last_name) AS employee, d.dept_name AS Department, dm.emp_no
-FROM employees AS e
-         JOIN dept_emp AS de ON de.emp_no = e.emp_no
-         JOIN departments AS d ON d.dept_no = de.dept_no
-         JOIN dept_manager AS dm ON dm.emp_no = e.emp_no;
+# ATTEMPTING BONUS
+# SELECT CONCAT(e.first_name, ' ', e.last_name)
+#     AS employee, d.dept_name
+#     AS Department, dm.emp_no
+# FROM employees AS e
+#          JOIN dept_emp AS de ON de.emp_no = e.emp_no
+#          JOIN departments AS d ON d.dept_no = de.dept_no
+#          JOIN dept_manager AS dm ON dm.emp_no = e.emp_no
+#          JOIN employees e2 ON e2.emp_no = e.emp_no;
