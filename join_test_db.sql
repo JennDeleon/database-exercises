@@ -25,7 +25,6 @@ FROM titles AS t
 WHERE dept_name = 'Customer Service' AND t.to_date >= now() AND de.to_date >= now()
 GROUP BY 1 ;
 
-#instructor solution for above problem
 SELECT t.title AS 'Title', COUNT(t.emp_no) AS 'Count'
 FROM titles AS t
          JOIN dept_emp AS de ON t.emp_no = de.emp_no
@@ -35,7 +34,6 @@ WHERE t.to_date > curdate()
   AND de.to_date > CURDATE()
 GROUP BY title;
 
-
 SELECT d.dept_name AS Department, CONCAT(emp.first_name, ' ', emp.last_name) AS Department_Manager, s.salary AS Salary
 FROM employees AS emp
          JOIN dept_manager AS dm ON dm.emp_no = emp.emp_no
@@ -43,7 +41,6 @@ FROM employees AS emp
          JOIN salaries AS s ON s.emp_no = emp.emp_no
 WHERE s.to_date >= now() AND dm.to_date >= now()
 ORDER BY d.dept_name;
-
 
 SELECT e.first_name AS name, dm.emp_no AS employee_id, s.salary AS salary
 FROM employees AS e
