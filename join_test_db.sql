@@ -1,5 +1,6 @@
 use jennifer;
 
+
 SELECT * FROM departments;
 SELECT * FROM dept_manager;
 
@@ -18,6 +19,7 @@ WHERE emp.gender = 'f' AND dm.to_date >= now()
 ORDER BY d.dept_name;
 
 # Find the current titles of employees currently working in the Customer Service department.
+
 SELECT t.title AS title, COUNT(e.emp_no) AS total
 FROM titles AS t
          JOIN employees AS e ON e.emp_no = t.emp_no
